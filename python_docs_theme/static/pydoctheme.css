@@ -34,24 +34,23 @@ body {
 }
 
 div.related {
+    margin-top: 0.5em;
     margin-bottom: 1.2em;
     padding: 0.5em 0;
-    border-top: 1px solid #ccc;
-    margin-top: 0.5em;
+    border-width: 1px;
+    border-color: #ccc;
+}
+
+.mobile-nav + div.related {
+    border-bottom-style: solid;
+}
+
+.document + div.related {
+    border-top-style: solid;
 }
 
 div.related a:hover {
     color: #0095c4;
-}
-
-div.related ~ div.related {
-    border-top: 1px solid #ccc;
-    border-bottom: none;
-}
-
-div.related:first-child {
-    border-top: 0;
-    border-bottom: 1px solid #ccc;
 }
 
 .related .switchers {
@@ -61,13 +60,6 @@ div.related:first-child {
 .switchers > div {
     margin-right: 5px;
 }
-
-.version_switcher_placeholder,
-.language_switcher_placeholder {
-    padding-left: 5px;
-    background-color: white;
-}
-
 
 div.related ul::after {
     content: '';
@@ -332,10 +324,6 @@ dl > dt span ~ em {
         flex: 0 1 0;
         margin-right: 1rem;
     }
-    .version_switcher_placeholder select {
-        height: 30px;
-        border-radius: 0;
-    }
     .nav-content .search {
         display: flex;
         flex: 1 1 auto;
@@ -497,30 +485,8 @@ dl > dt span ~ em {
     .menu ul li {
         margin-bottom: 0.5rem;
     }
-    .language_switcher_placeholder,
-    .version_switcher_placeholder {
-        position: relative;
-        border: 1px solid #a8a8a8;
-        height: 30px;
-    }
     .language_switcher_placeholder {
-        margin-top: 2rem;
-    }
-    .language_switcher_placeholder::after,
-    .version_switcher_placeholder::after {
-        content: url('../_static/caret-down.svg');
-        position: absolute;
-        top: 7px;
-        width: 15px;
-        height: 15px;
-        right: 3px;
-        pointer-events: none;
-    }
-    .language_switcher_placeholder select,
-    .version_switcher_placeholder select {
-        appearance: none;
-        border: 0;
-        height: 100%;
+        margin-top: 1.5rem;
     }
     .language_switcher_placeholder select {
         width: 100%;
